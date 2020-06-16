@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faTrashAlt} from '@fortawesome/free-solid-svg-icons';
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-icon-delete',
