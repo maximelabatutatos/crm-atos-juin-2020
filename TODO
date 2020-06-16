@@ -12,5 +12,8 @@ alt+C -> KO
 ✔ UiModule @done(20-06-15 14:17)
 ✔ TemplatesModule @done(20-06-15 14:17)
 
-☐ life cycles
-☐ TextModule
+✔ life cycles @done(20-06-16 12:22)
+✔ TextModule @done(20-06-16 12:22)
+☐ nav-items component with @Input() and interface
+☐ Router
+
