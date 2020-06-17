@@ -14,6 +14,7 @@ alt+C -> KO
 
 ✔ life cycles @done(20-06-16 12:22)
 ✔ TextModule @done(20-06-16 12:22)
-☐ nav-items component with @Input() and interface
-☐ Router
+✔ nav-items component with @Input() and interface @done(20-06-17 09:30)
+✔ Router @done(20-06-17 09:25)
+✔ TP router @done(20-06-17 09:25)
 

@@ -1,1 +1,3 @@
-<ng-content></ng-content>
+<div [ngClass]="{'color-light': colorLight}" [ngStyle]="{'color': color}">
+  <ng-content></ng-content>
+</div>

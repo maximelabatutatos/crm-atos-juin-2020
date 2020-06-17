@@ -1,7 +1,9 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PageListClientsComponent } from './pages/page-list-clients/page-list-clients.component';
+import { NgModule } from '@angular/core';
+import { TemplatesModule } from '../templates/templates.module';
 import { ClientsRoutingModule } from './clients-routing.module';
+import { PageListClientsComponent } from './pages/page-list-clients/page-list-clients.component';
+import { TextModule } from '../text/text.module';
 
 
 
@@ -9,7 +11,9 @@ import { ClientsRoutingModule } from './clients-routing.module';
   declarations: [PageListClientsComponent],
   imports: [
     CommonModule,
-    ClientsRoutingModule
+    ClientsRoutingModule,
+    TemplatesModule,
+    TextModule
   ]
 })
 export class ClientsModule { }
