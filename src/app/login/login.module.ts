@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PageLoginComponent } from './pages/page-login/page-login.component';
 import { LoginRoutingModule } from './login-routing.module';
+import { TemplatesModule } from '../templates/templates.module';
+import { TextModule } from '../text/text.module';
 
 
 
@@ -9,7 +11,9 @@ import { LoginRoutingModule } from './login-routing.module';
   declarations: [PageLoginComponent],
   imports: [
     CommonModule,
-    LoginRoutingModule
+    LoginRoutingModule,
+    TemplatesModule,
+    TextModule
   ]
 })
 export class LoginModule { }

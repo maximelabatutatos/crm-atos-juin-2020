@@ -4,6 +4,7 @@ import { PageListOrdersComponent } from './pages/page-list-orders/page-list-orde
 import { OrdersRoutingModule } from './orders-routing.module';
 import { TemplatesModule } from '../templates/templates.module';
 import { TextModule } from '../text/text.module';
+import { LibraryModule } from '../library/library.module';
 
 
 
@@ -13,7 +14,8 @@ import { TextModule } from '../text/text.module';
     CommonModule,
     OrdersRoutingModule,
     TemplatesModule,
-    TextModule
+    TextModule,
+    LibraryModule
   ]
 })
 export class OrdersModule { }

@@ -9,6 +9,7 @@ import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 export class TextComponent implements OnInit {
 
   @Input() color: string;
+  @Input() footer: boolean;
 
   constructor() { }
 
