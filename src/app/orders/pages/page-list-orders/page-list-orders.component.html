@@ -1,16 +1,13 @@
 <app-template-one-col [title]="true">
-
   <ng-container class="title">
-    <app-text class="text" color="color3">
+    <app-text class="text" color="color-light">
       <h1>Orders</h1>
     </app-text>
   </ng-container>
-
   <ng-container class="contents">
-    <div>contenu de ma page</div>
-    <app-btn label="Add an order" route="add"></app-btn>
-    <app-btn label="Angular" href="https://www.angular.io/docs"></app-btn>
-    <app-btn label="Popup" [action]="true"></app-btn>
+    <div>table component</div>
+    <app-btn label="Add an Order" route="add" color="color-light"></app-btn>
+    <app-btn label="Angular" href="https://www.angular.io" color="color2"></app-btn>
+    <app-btn label="Popup" [action]="true" color="color3"></app-btn>
   </ng-container>
-
 </app-template-one-col>

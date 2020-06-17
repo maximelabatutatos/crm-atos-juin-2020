@@ -1,46 +1,58 @@
 @import 'theme';
 @import 'fonts';
-
 app-text {
   display: block;
-  padding: 10px;
+  // padding: 10px;
 }
-
+// colors
 .text {
-  h1, h2, h3, p, span, i, li {
+  h1, h2, h3, p, span, i, li, a, button {
     color: $dark-color;
   }
 }
 .text {
   .color-light {
-    h1, h2, h3, p, span, i, li {
+    h1, h2, h3, p, span, i, li, a, button {
       color: $light-color;
     }
   }
+}
+.text {
   .color1 {
-    h1, h2, h3, p, span, i, li {
+    h1, h2, h3, p, span, i, li, a, button {
       color: $color1;
     }
   }
+}
+.text {
   .color2 {
-    h1, h2, h3, p, span, i, li {
+    h1, h2, h3, p, span, i, li, a, button {
       color: $color2;
     }
   }
+}
+.text {
   .color3 {
-    h1, h2, h3, p, span, i, li {
+    h1, h2, h3, p, span, i, li, a, button {
       color: $color3;
     }
   }
-  .footer {
-    text-align: center
+}
+.text {
+  .color-error {
+    h1, h2, h3, p, span, i, li, a, button {
+      color: $color-error;
+    }
   }
 }
-// .pages {
-//   h1, h2, h3, p, span, i, li {
-//     color: $dark-color;
-//   }
-// }
+.text {
+  .color-success {
+    h1, h2, h3, p, span, i, li, a, button {
+      color: $color-success;
+    }
+  }
+}
+// sizes
 h1 {
   font-size: $h1-fz;
 }

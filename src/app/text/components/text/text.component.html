@@ -1,7 +1,3 @@
-<div [ngClass]="{'color-light': color === 'color-light',
-                 'color1': color === 'color1',
-                 'color2': color === 'color2',
-                 'color3': color === 'color3',
-                 'footer': footer}">
+<div [appColor]="color" [ngClass]="{'footer': footer}">
   <ng-content></ng-content>
 </div>
