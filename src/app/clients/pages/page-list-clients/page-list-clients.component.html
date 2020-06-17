@@ -1,17 +1,14 @@
-<app-template-two-cols [title]="true">
+<app-template-one-col [title]="true">
 
   <ng-container class="title">
-    <app-text class="text" color="color2">
+    <app-text class="text" color="color-light">
       <h1>Clients</h1>
     </app-text>
   </ng-container>
 
-  <ng-container class="content-left">
-    contenu gauche de ma page
+  <ng-container class="contents">
+    <div>{{ collection | json }}</div>
+    <app-table-light [headers]="headers"></app-table-light>
   </ng-container>
 
-  <ng-container class="content-right">
-    contenu droit de ma page
-  </ng-container>
-
-</app-template-two-cols>
+</app-template-one-col>
