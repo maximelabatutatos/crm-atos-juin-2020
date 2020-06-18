@@ -1,10 +1,11 @@
-import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges, ViewEncapsulation } from '@angular/core';
 import { Order } from 'src/app/shared/models/order';
 
 @Component({
   selector: 'app-table-light',
   templateUrl: './table-light.component.html',
-  styleUrls: ['./table-light.component.scss']
+  styleUrls: ['./table-light.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class TableLightComponent implements OnInit {
 

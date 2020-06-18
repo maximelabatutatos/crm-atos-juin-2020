@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class TemplateTwoColsComponent implements OnInit {
 
   @Input() title: boolean;
+  @Input() bgColor2: boolean;
 
   constructor() { }
 

@@ -14,7 +14,7 @@
       "tjmHt": 700,
       "nbJours": 5,
       "tva": 20,
-      "state": "OPTION",
+      "state": "CANCELED",
       "typePresta": "Formation",
       "client": "Atos",
       "comment": "Comment pour Atos",
@@ -24,7 +24,7 @@
       "tjmHt": 600,
       "nbJours": 1,
       "tva": 20,
-      "state": "CONFIRMED",
+      "state": "CANCELED",
       "typePresta": "Coaching",
       "client": "Modis",
       "comment": "test",
@@ -53,7 +53,7 @@
   ],
   "clients": [
     {
-      "state": "ACTIVE",
+      "state": "INACTIVE",
       "tva": 20,
       "id": 1,
       "name": "Christophe2",
@@ -61,7 +61,7 @@
       "comment": "un comment pour client christophe2"
     },
     {
-      "state": "INACTIVE",
+      "state": "ACTIVE",
       "tva": 20,
       "id": 2,
       "name": "Modis",

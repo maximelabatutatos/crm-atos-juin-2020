@@ -1,6 +1,6 @@
 @import 'theme';
 
-.tables-light {
+.table-dark {
   .state-canceled{
     background: $color-error;
   }
@@ -19,7 +19,7 @@
 }
 
 .bg-color2{
-  .tables-dark {
+  .table-dark {
     .state-option{
       background: $color2;
     }
