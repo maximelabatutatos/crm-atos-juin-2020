@@ -13,7 +13,7 @@
         <td>{{ item.typePresta }}</td>
         <td>{{ item.client }}</td>
         <td>{{ item.nbJours }}</td>
-        <td>
+        <td [appState]="item.state">
           <select (change)="changeState(item, $event)">
             <option *ngFor="let state of states" [value]="state" [selected]="state === item.state">{{ state }}</option>
           </select>

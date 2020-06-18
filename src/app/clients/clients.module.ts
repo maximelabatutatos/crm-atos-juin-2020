@@ -5,6 +5,7 @@ import { TextModule } from '../text/text.module';
 import { ClientsRoutingModule } from './clients-routing.module';
 import { PageListClientsComponent } from './pages/page-list-clients/page-list-clients.component';
 import { LibraryModule } from '../library/library.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -15,7 +16,8 @@ import { LibraryModule } from '../library/library.module';
     ClientsRoutingModule,
     TemplatesModule,
     TextModule,
-    LibraryModule
+    LibraryModule,
+    SharedModule
   ]
 })
 export class ClientsModule { }
