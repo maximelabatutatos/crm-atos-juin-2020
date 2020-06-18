@@ -17,7 +17,7 @@ import { SharedModule } from '../shared/shared.module';
     TemplatesModule,
     TextModule,
     LibraryModule,
-    SharedModule
+    SharedModule,
   ]
 })
 export class OrdersModule { }
