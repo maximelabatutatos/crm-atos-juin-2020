@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Order } from 'src/app/shared/models/order';
 
 @Component({
   selector: 'app-table-light',
@@ -14,5 +15,4 @@ export class TableLightComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
