@@ -38,7 +38,7 @@ export class FormOrderComponent implements OnInit {
     });
 
     this.form.valueChanges.subscribe((datas) => {
-      console.log(datas);
+      // console.log(datas);
     });
   }
 

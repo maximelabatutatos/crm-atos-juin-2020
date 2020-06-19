@@ -1,10 +1,10 @@
 {
   "orders": [
     {
-      "tjmHt": 500,
+      "tjmHt": 600,
       "nbJours": 1,
-      "tva": 20,
-      "state": "CANCELED",
+      "tva": 50,
+      "state": "CONFIRMED",
       "typePresta": "Formation2",
       "client": "nemesys",
       "comment": "fssdgh",
@@ -21,11 +21,11 @@
       "id": 4
     },
     {
-      "tjmHt": 600,
+      "tjmHt": 800,
       "nbJours": 1,
       "tva": 20,
       "state": "CANCELED",
-      "typePresta": "Coaching",
+      "typePresta": "Coachinger",
       "client": "Modis",
       "comment": "test",
       "id": 5
@@ -55,7 +55,7 @@
       "nbJours": 8,
       "tva": 20,
       "state": "CONFIRMED",
-      "typePresta": "formation blabla",
+      "typePresta": "formation blaert",
       "client": "atos",
       "comment": "Merci !",
       "id": 8

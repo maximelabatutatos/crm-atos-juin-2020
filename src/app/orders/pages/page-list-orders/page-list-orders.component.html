@@ -6,7 +6,18 @@
     </app-text>
   </ng-container>
 
+
+
   <ng-container class="contents">
+
+    <form [formGroup]="form">
+      <div class="form-group row">
+        <label for="search" class="col-sm-2 col-form-label">Search</label>
+        <div class="col-sm-10">
+          <input formControlName="search" type="text" class="form-control" id="search" autocomplete="off">
+        </div>
+      </div>
+    </form>
     <app-table-dark *ngIf="collection$ | async as collection" [headers]="headers">
       <tr *ngFor="let item of collection">
         <td>{{ item.typePresta }}</td>
@@ -16,7 +27,7 @@
         <td>{{ item | total: 'HT' | currency: 'EUR' }}</td>
         <td>{{ item | total: 'TTC' | currency: 'EUR' }}</td>
         <td [appState]="item.state">
-          <select (change)="changeState(item, $event)">
+          <select (change)="changeState(item, $event)" (click)="$event.stopPropagation()">
             <option *ngFor="let state of states" [value]="state" [selected]="state === item.state">{{ state }}</option>
           </select>
         </td>
