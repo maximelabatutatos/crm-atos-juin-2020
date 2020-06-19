@@ -1,3 +1,8 @@
+# Commands
+`ng-serve -o` -> start angular server
+`json-server --watch src/mock.db/db.json` -> start JSON server -> https://github.com/typicode/json-server
+
+
 # CrmAtosJuin
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.8.

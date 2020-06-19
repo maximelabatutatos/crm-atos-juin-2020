@@ -1,9 +1,9 @@
-import { Component, OnDestroy, OnInit, Input } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { StateOrder } from 'src/app/shared/enums/state-order.enum';
 import { Order } from 'src/app/shared/models/order';
 import { OrdersService } from '../../services/orders.service';
-import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-page-list-orders',
@@ -25,31 +25,28 @@ export class PageListOrdersComponent implements OnInit, OnDestroy {
     this.form = this.fb.group({
       search: [this.search]
     });
-   }
+  }
 
   ngOnInit(): void {
     this.collection$ = this.os.collection;
     // this.sub = this.os.collection.subscribe((flux) => {
     //  this.collection = flux;
     // });
-    this.headers = ['Type', 'Client', 'Nb Jours', 'TJM HT', 'Total HT', 'Total TTC', 'Etat', '', ''];
+    this.headers = ['Type', 'Client', 'Nb Jours', 'TJM HT', 'Total HT', 'Total TTC', 'Etat'];
 
     this.form.valueChanges.subscribe((data) => {
-      this.collection = this.filterCollection(data.search);
+      this.search = data.search;
+      this.filterCollection(data.search);
     });
   }
 
-  public filterCollection(data: string): Order[] {
-    const collection = [];
-    this.collection$.subscribe(orders => {
+  public filterCollection(data: string){
+    this.collection$.forEach(orders => {
       for(let order of orders){
         // console.log(order.typePresta + " " + data + " " + order.typePresta.includes(data))
-        if(order.typePresta && order.typePresta.includes(data)){
-          collection.push(order);
-        }
+        order['found'] = order.typePresta && order.typePresta.includes(data);
       }
     })
-    return collection;
   }
 
   ngOnDestroy(): void {
@@ -64,10 +61,6 @@ export class PageListOrdersComponent implements OnInit, OnDestroy {
 
   public popup(){
     console.log("popup")
-  }
-
-  public editItem(item: Order){
-    console.log("edit");
   }
 
   public deleteItem(item: Order){

@@ -6,6 +6,7 @@ import { BtnComponent } from './components/btn/btn.component';
 import { NavInlineComponent } from './components/nav-inline/nav-inline.component';
 import { TableDarkComponent } from './components/table-dark/table-dark.component';
 import { TableLightComponent } from './components/table-light/table-light.component';
+import { IconsModule } from '../icons/icons.module';
 
 
 
@@ -14,7 +15,8 @@ import { TableLightComponent } from './components/table-light/table-light.compon
   imports: [
     CommonModule,
     RouterModule,
-    TextModule
+    TextModule,
+    IconsModule
   ],
   exports: [NavInlineComponent, BtnComponent, TableLightComponent, TableDarkComponent]
 })

@@ -18,10 +18,10 @@
         </div>
       </div>
     </form>
-    <app-table-dark *ngIf="collection$ | async as collection" [headers]="headers">
+    <app-table-light *ngIf="collection$ | async as collection" [headers]="headers">
       <tr *ngFor="let item of collection">
-        <td>{{ item.typePresta }}</td>
-        <td>{{ item.client }}</td>
+        <td [appHighlight]="{data: item.typePresta, expression: search}">{{ item.typePresta }}</td>
+        <td [appHighlight]="{data: item.client, expression: search}">{{ item.client }}</td>
         <td>{{ item.nbJours }}</td>
         <td>{{ item.tjmHt | currency: 'EUR' }}</td>
         <td>{{ item | total: 'HT' | currency: 'EUR' }}</td>
@@ -32,17 +32,17 @@
           </select>
         </td>
         <td>
-          <a [routerLink]="item.id"><app-icon-edit (click)="editItem(item)"></app-icon-edit></a>
+          <a [routerLink]="item.id"><app-icon-edit></app-icon-edit></a>
         </td>
         <td>
           <app-icon-delete (click)="deleteItem(item)"></app-icon-delete>
         </td>
       </tr>
-    </app-table-dark>
+    </app-table-light>
 
-    <app-btn label="Add an Order" route="add" color="color-light"></app-btn>
-    <app-btn label="Angular" href="https://www.angular.io" color="color2"></app-btn>
-    <app-btn label="Popup" [action]="true" color="color3" (clicked)="popup()"></app-btn>
+    <!-- <app-btn label="Add an Order" route="add" color="color-light"></app-btn> -->
+    <!-- <app-btn label="Angular" href="https://www.angular.io" color="color2"></app-btn> -->
+    <!-- <app-btn label="Popup" [action]="true" color="color3" (clicked)="popup()"></app-btn> -->
   </ng-container>
 
 </app-template-one-col>

@@ -1,4 +1,4 @@
-<app-template-two-cols [title]="true">
+<app-template-one-col [title]="true">
 
   <ng-container class="title">
     <app-text class="text" color="color-light">
@@ -6,12 +6,8 @@
     </app-text>
   </ng-container>
 
-  <ng-container class="content-left">
+  <ng-container class="contents">
     <app-form-order [initItem]="initItem" (submitted)="add($event)"></app-form-order>
   </ng-container>
 
-  <ng-container class="content-right">
-    droite
-  </ng-container>
-
-</app-template-two-cols>
+</app-template-one-col>
