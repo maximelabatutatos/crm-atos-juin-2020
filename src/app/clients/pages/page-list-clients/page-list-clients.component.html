@@ -1,4 +1,4 @@
-<app-template-one-col [title]="true">
+<app-template-one-col [title]="true" [bgColor2]="true">
 
   <ng-container class="title">
     <app-text class="text" color="color-light">
@@ -7,12 +7,12 @@
   </ng-container>
 
   <ng-container class="contents">
-    <div>{{ collection | json }}</div>
     <app-table-light [headers]="headers">
       <tr *ngFor="let item of collection">
-        <td>{{ item.typePresta }}</td>
-        <td>{{ item.client }}</td>
-        <td>{{ item.nbJours }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.ca | currency: 'EUR' }}</td>
+        <td>{{ item.tva }}</td>
+        <td>{{ item | ca:'TTC' | currency: 'EUR' }}</td>
         <td [appState]="item.state">
           <select (change)="changeState(item, $event)">
             <option *ngFor="let state of states" [value]="state" [selected]="state === item.state">{{ state }}</option>

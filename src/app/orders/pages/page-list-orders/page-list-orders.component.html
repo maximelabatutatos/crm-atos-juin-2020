@@ -20,6 +20,12 @@
             <option *ngFor="let state of states" [value]="state" [selected]="state === item.state">{{ state }}</option>
           </select>
         </td>
+        <td>
+          <a [routerLink]="item.id"><app-icon-edit (click)="editItem(item)"></app-icon-edit></a>
+        </td>
+        <td>
+          <app-icon-delete (click)="deleteItem(item)"></app-icon-delete>
+        </td>
       </tr>
     </app-table-dark>
 

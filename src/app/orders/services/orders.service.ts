@@ -27,7 +27,7 @@ export class OrdersService {
   }
 
   // changeState item in collection
-  changeState(item: Order, state: StateOrder): Observable<Order> {
+  public changeState(item: Order, state: StateOrder): Observable<Order> {
     const obj = {...item};
     obj.state = state;
     return this.update(obj);
@@ -39,10 +39,18 @@ export class OrdersService {
   }
 
   // add item in collection
+  public add(item: Order): Observable<Order>{
+    return this.http.post<Order>(`${this.urlApi}orders`, item);
+  }
 
   // delete item in collection
+  public delete(item: Order){
+    return this.http.delete(`${this.urlApi}orders/${item.id}`);
+  }
 
   // get item by id from collection
-
+  public getById(id: number): Observable<Order>{
+    return this.http.get<Order>(`${this.urlApi}orders/${id}`);
+  }
 
 }

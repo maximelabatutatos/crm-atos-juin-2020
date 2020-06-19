@@ -49,11 +49,31 @@
       "client": "nemesys",
       "comment": "un joli commentaire",
       "id": 7
+    },
+    {
+      "tjmHt": 1200,
+      "nbJours": 8,
+      "tva": 20,
+      "state": "CONFIRMED",
+      "typePresta": "formation blabla",
+      "client": "atos",
+      "comment": "Merci !",
+      "id": 8
+    },
+    {
+      "tjmHt": 1100,
+      "nbJours": 10,
+      "tva": 20,
+      "state": "CONFIRMED",
+      "typePresta": "coaching",
+      "client": "atos",
+      "comment": "test",
+      "id": 9
     }
   ],
   "clients": [
     {
-      "state": "INACTIVE",
+      "state": "ACTIVE",
       "tva": 20,
       "id": 1,
       "name": "Christophe2",

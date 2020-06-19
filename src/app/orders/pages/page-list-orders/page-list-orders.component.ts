@@ -1,8 +1,8 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { OrdersService } from '../../services/orders.service';
-import { Order } from 'src/app/shared/models/order';
-import { Subscription, Observable } from 'rxjs';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { StateOrder } from 'src/app/shared/enums/state-order.enum';
+import { Order } from 'src/app/shared/models/order';
+import { OrdersService } from '../../services/orders.service';
 
 @Component({
   selector: 'app-page-list-orders',
@@ -24,7 +24,7 @@ export class PageListOrdersComponent implements OnInit, OnDestroy {
     // this.sub = this.os.collection.subscribe((flux) => {
     //  this.collection = flux;
     // });
-    this.headers = ['Type', 'Client', 'Nb Jours', 'TJM HT', 'Total HT', 'Total TTC', 'Etat'];
+    this.headers = ['Type', 'Client', 'Nb Jours', 'TJM HT', 'Total HT', 'Total TTC', 'Etat', '', ''];
   }
 
   ngOnDestroy(): void {
@@ -39,6 +39,16 @@ export class PageListOrdersComponent implements OnInit, OnDestroy {
 
   public popup(){
     console.log("popup")
+  }
+
+  public editItem(item: Order){
+    console.log("edit");
+  }
+
+  public deleteItem(item: Order){
+    this.os.delete(item).subscribe((res) =>{
+      console.log("order supprimé");
+    });
   }
 
 }

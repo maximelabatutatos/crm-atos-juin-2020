@@ -20,7 +20,7 @@ export class PageListClientsComponent implements OnInit {
     this.cs.collection.subscribe((flux) => {
       this.collection = flux;
     });
-    this.headers = ['Type', 'Type', 'Type', 'Type'];
+    this.headers = ['Nom', 'CA HT', 'TVA', 'CA TTC', 'Etat'];
   }
 
   public changeState(item: Client, e){
